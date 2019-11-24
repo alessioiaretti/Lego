@@ -3,17 +3,29 @@
  [
    {
      "name": "Alien Avanger",
-     "imgSrc": "6975b.jpg"
+     "imgSrc": "6975b.jpg",
+     "number": "6975",
+     "theme": "UFO",
+     "year": "1998",
+     "imgIstr": "005.jpg"
    },
 
    {
      "name": "Interstellar Starfighter",
-     "imgSrc": "6979b.jpg"
+     "imgSrc": "6979b.jpg",
+     "number": "6979",
+     "theme": "UFO",
+     "year": "1998",
+     "imgIstr": "004.jpg"
    },
 
    {
      "name": "Car Cyber Saucer",
-     "imgSrc": "6999b.jpg"
+     "imgSrc": "6999b.jpg",
+     "number": "6999",
+     "theme": "UFO",
+     "year": "1997",
+     "imgIstr": "003.jpg"
    }
  ]
 }

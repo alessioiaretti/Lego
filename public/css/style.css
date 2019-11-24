@@ -46,14 +46,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 80px;
-  background-color: #525286;
-  color: #FFFFFF;
+  background-color: black;
+  color: rgb(255, 255, 255);
   margin-bottom: 50px;
 }
 
 
 
-/* Homepage Container
+/* Stili della pagina home (index.pug)
    ========================================================================== */
 
 .container {
@@ -62,12 +62,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  color: blue;
 }
-
-
-
-/* Profile Card
-   ========================================================================== */
 
 .elemento {
   text-align: center;
@@ -83,23 +79,22 @@ body {
 }
 
 
-
-/* Profile Page
+/* Stili della seconda pagina
    ========================================================================== */
 
-.profile {
+.oggetto {
   display: flex;
   height: 100vh;
   width: 100%;
 }
 
-.profile-image {
+.oggetto-image {
   height: 100%;
   flex-grow: 1;
   flex-basis: 50%;
 }
 
-.profile-details {
+.oggetto-details {
   flex-basis: 30%;
   flex-grow: 1;
   padding: 50px;
@@ -108,7 +103,7 @@ body {
   flex-direction: column;
 }
 
-.profile-details > * {
+.oggetto-details > * {
   margin-bottom: 20px;
 }
 

@@ -16,19 +16,20 @@ app.get('/', function (req, res)
  { 
   res.render('index', {
    title: 'Lego',
-   scatole: lego.models //Passa il vettore profiles alla pagina index.pug
+   scatole: lego.models //Passa il vettore models alla pagina index.pug
  });
 });
 
-/* SECONDA PAGINA
-app.get('/profile', (req, res) => {
-  const person = people.profiles.find((p) => p.id === req.query.id);
-  res.render('profile', {
-    title: `About ${person.firstname} ${person.lastname}`,
-    person,
+/* SECONDA PAGINA */
+app.get('/istruzioni', (req, res) => {
+  const elemento = lego.models.find((p) => p.name === req.query.nome);
+  res.render('istruzioni', 
+  {
+    title: `Informazioni ${elemento.name}`,
+    elemento
   });
 });
-*/
+
 
 app.listen(3000, function () {
  console.log('Apertura server web su porta 3000!!');

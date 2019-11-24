@@ -1,0 +1,21 @@
+doctype html
+html
+ head
+   title #{title}
+   link(rel='stylesheet', href='/css/style.css')
+   meta(name="viewport" content="width=device-width, initial-scale=1")
+ body
+   header.header
+         h1 #{title}
+   div.oggetto
+     div.oggetto-image(style=`background: url('/images/${elemento.imgIstr}') top center no-repeat; background-size: cover;`)
+     div.oggetto-details 
+       p
+         | Set Number: <B style="color: red;"> #{elemento.number} </B>
+       p
+         | Set Theme: <B style="color: red;"> #{elemento.theme} </B>
+       p
+         | Set Name: <B style="color: red;"> #{elemento.name} </B>
+       p
+         | Set Year: <B style="color: red;"> #{elemento.year} </B>
+    
