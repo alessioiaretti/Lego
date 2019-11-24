@@ -1,21 +1,26 @@
-var express = require('express');
-const people = require('./people.json'); //Copia il file people.json dentro la variabile people
-var app = express();
+var express = require('express'); // Carica in memoria la libreria express usando la variabile express
 
-app.set('view engine', 'pug');   //Dico a express di usare pug come motore di template e quindi andare 
-                                 // nella cartella "views" e usarla come cartella principale 
-                                 // e per trovare le pagine con estensione "pug"
+var app = express(); // Assegno la variabile express nella variabile app
 
 app.use(express.static(__dirname + '/public')); // Dico ad express dove recuperare i file statici come 
-                                                // fogli di stile e immagini
+                                                // fogli di stile css e immagini
 
-app.get('/', function (req, res) {
+app.set('view engine', 'pug');  // Invece di usare le pagine con estensione ".html" contenute nella cartella 
+                                // principale, dico a express di usare files con estensione ".pug" contenuti 
+                                // nella cartella "views" e usarla come cartella principale 
+                                // per trovare le pagine con estensione ".pug"
+
+const lego = require('./lego.json'); // Copio il contenuto del file lego.json nella variabile models
+
+app.get('/', function (req, res)
+ { 
   res.render('index', {
-   title: 'Homepage',
-   people: people.profiles //Passa il vettore profiles alla pagina index.pug
+   title: 'Lego',
+   scatole: lego.models //Passa il vettore profiles alla pagina index.pug
  });
 });
 
+/* SECONDA PAGINA
 app.get('/profile', (req, res) => {
   const person = people.profiles.find((p) => p.id === req.query.id);
   res.render('profile', {
@@ -23,8 +28,8 @@ app.get('/profile', (req, res) => {
     person,
   });
 });
-
+*/
 
 app.listen(3000, function () {
- console.log('Example app listening on port 3000!');
+ console.log('Apertura server web su porta 3000!!');
 });

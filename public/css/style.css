@@ -69,15 +69,15 @@ body {
 /* Profile Card
    ========================================================================== */
 
-.person {
+.elemento {
   text-align: center;
 }
 
-.person > * {
+.elemento > * {
   margin-bottom: 5px;
 }
 
-.person-image {
+.elemento-image {
   width: 100%;
   height: 300px;
 }
